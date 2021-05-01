@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyparser.json());
 
 app.get('/time', (req, res) => {
-  res.json({ ok: true, time: (Date.now()).split('T')[1] });
+  res.json({ ok: true, time: (new Date(Date.now())) });
 });
 
 app.listen(3000 || process.env.port, () => {
