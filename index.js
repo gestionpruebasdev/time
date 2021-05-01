@@ -12,6 +12,6 @@ app.get('/time', (req, res) => {
   res.json({ ok: true, time: (new Date(Date.now())) });
 });
 
-app.listen(3000 || process.env.port, () => {
+app.listen(3000 || process.env.PORT, () => {
   console.log('server running');
 });
